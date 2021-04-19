@@ -1,0 +1,16 @@
+.default {
+    background-color: #fff;
+    color: #000;
+}
+.darkPower {
+    background-color: #000;
+    color: #ddd;
+}
+.redYellow {
+    background-color: #a00;
+    color: yellow;
+}
+.blueRed {
+    background-color: #009;
+    color: red;
+}
