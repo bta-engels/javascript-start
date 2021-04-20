@@ -54,4 +54,13 @@
             </ul>
         </div>
     </div>
+    <script>
+    var firstRow = document.querySelector("body .container .row"),
+        col3 = firstRow.querySelector(".col:last-child"),
+        h5 = col3.querySelector("h5");
+        
+    h5.style.color = "red";    
+
+    console.info(col3)
+    </script>
 <?php require '../inc/footer.html'; ?>
