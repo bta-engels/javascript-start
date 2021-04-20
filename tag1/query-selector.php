@@ -63,4 +63,10 @@
 
     console.info(col3)
     </script>
+    <style>
+        ul li:hover {
+            cursor: pointer;
+            color: #a00;
+        }
+    </style>
 <?php require '../inc/footer.html'; ?>
