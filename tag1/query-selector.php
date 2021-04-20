@@ -1,4 +1,5 @@
 <?php require '../inc/header.html'; ?>
+
     <h1>Query Selector Übungen</h1>
     <hr>
     <h3>1. Reihe</h3>

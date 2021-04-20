@@ -1,8 +1,40 @@
 <script>
     // einfache variable (string, int, float)
+    var name = "Bernd Engels",
+        zahl = 200,
+        year = 2021;
+    
+//        document.writeln(name);
+//        console.info(name);
+
     // array variable numerisch
+    var arr = [10, 'Hans', 'Lisa'],
+        anzahl = arr.length;
+
+//    console.info(anzahl);
 	// assoziatives array
+    var author = [];
+    author["firstname"] = "Bernd";
+    author["lastname"] = "Engels";
+//    console.info(author.firstname);
+
     // objekte
+    var person = {
+        "firstname": "Bernd",
+        "lastname": "Engels"
+    };   
+//    console.info(person['lastname']);
     // klassische for-schleife
-	// schleife wie foreach (in, of)
+    for(var i = 0; i < anzahl; i++) {
+//        console.info(arr[i]);
+    }
+    // kurschreibweise mit 'of'
+    for (item of arr) {
+//        console.info(item);
+    }
+
+    // schleife wie foreach (in)
+    for(item in person) {
+        console.info(item + ": " + person[item]);
+    }
 </script>
