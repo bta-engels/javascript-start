@@ -32,7 +32,7 @@
         operator = document.getElementById('operator'),
         h1 = document.querySelector("h1");
 
-        button.onclick = function (evt) {
+        button.onclick = function () {
             var numA = parseInt(a.value),
                 numB = parseInt(b.value),
                 ergebnis = rechner(numA, numB, operator.value);

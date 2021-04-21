@@ -57,11 +57,26 @@
     <script>
     var firstRow = document.querySelector("body .container .row"),
         col3 = firstRow.querySelector(".col:last-child"),
-        h5 = col3.querySelector("h5");
+        h5 = col3.querySelector("h5"),
+        rows = document.querySelectorAll(".row"),
+        p = rows[1].querySelector(".col:nth-child(2) p")
+    ;
 
-    h5.style.color = "red";    
+    h5.style.color = "red";
+    p.style.backgroundColor = "#009";
+    p.style.color = "#fff";
+    var h1 = document.querySelector("h1"),
+	    ul = document.querySelector("ul");
 
-    console.info(col3)
+    ul.onmouseover = function (e) {
+	    //console.info(e.target.innerText);
+	    h1.innerText = e.target.innerText;
+    }
+    ul.onmouseout = function (e) {
+	    //console.info(e.target.innerText);
+	    h1.innerText = "wech";
+    }
+    console.info(p)
     </script>
     <style>
         ul li:hover {
