@@ -36,8 +36,8 @@
             var numA = parseInt(a.value),
                 numB = parseInt(b.value),
                 ergebnis = rechner(numA, numB, operator.value);
+            // ergebnis ausgabe
+	        h1.innerText = ergebnis;
         }
-        console.info(h1);
-
 </script>
 <?php require '../inc/footer.html'; ?>
