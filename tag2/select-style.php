@@ -8,6 +8,7 @@
         div = document.querySelector('.container div'),
         styles = ["default", "darkPower", "redYellow", "blueRed"],
         ul = document.createElement("ul");
+    // hänge ul in div ein
     div.append(ul);
 
     for(item of styles) {
@@ -15,6 +16,7 @@
         li = document.createElement("li");
 	    li.innerText = item;
 	    li.style.cursor = "pointer";
+	    // hänge li in ul ein
 	    ul.append(li);
     }
 
