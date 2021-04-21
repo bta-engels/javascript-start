@@ -79,7 +79,7 @@
     console.info(p)
     </script>
     <style>
-        ul li:hover {
+        ul li {
             cursor: pointer;
             color: #a00;
         }
