@@ -8,8 +8,6 @@
         datum = new Date();
 
     spanDatum.innerText = datum.toLocaleDateString();
-
-    spanClock.innerText = "Heinz";
-
+    // declare function (named "myClock") to get local time and display on spanClock
 </script>
 <?php require '../inc/footer.html'; ?>
