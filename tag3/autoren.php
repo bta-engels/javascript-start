@@ -5,6 +5,7 @@
 
 <script>
     // ajax request per GET methode
+    const URL = "http://bta-movies-start.loc";
     // API liefert alle autoren per JSON, baue damit liste (li) zusammen
     // loop über authors array
     // li - elem bauen
