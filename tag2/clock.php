@@ -9,5 +9,15 @@
 
     spanDatum.innerText = datum.toLocaleDateString();
     // declare function (named "myClock") to get local time and display on spanClock
+
+    myClock();
+    window.setInterval(myClock, 1000);
+    // oder kurz
+    // setInterval(myClock, 1000);
+
+    function myClock() {
+	    var d = new Date();
+	    spanClock.innerText = d.toLocaleTimeString();
+    }
 </script>
 <?php require '../inc/footer.html'; ?>
