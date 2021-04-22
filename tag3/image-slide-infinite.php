@@ -6,13 +6,13 @@
 <script>
     var images = ["cowboy.jpg", "haus_in_strasse.jpg", "hütte.jpg", "vw.jpg", "venus.jpg"],
         img = document.getElementById("image"),
-        counter = 0,
-	    interval = setInterval(slider, 1000);
+        counter = 0;
 
+    setInterval(slider, 1000);
 
     function slider() {
 	    if(counter === images.length) {
-		    return clearInterval(interval);
+		    counter = 0;
 	    }
     	img.src = "../img/" + images[counter];
     	counter++;
