@@ -10,15 +10,16 @@
     var divAuthors = document.querySelector(".col:first-child"),
 	    divAuthor = document.querySelector(".col:last-child"),
         ul = document.createElement("ul"),
-        li, item;
+        li, author;
     // ajax request per GET methode
     const URL = "http://bta-movies-start.loc";
     $.get(URL + "/api/authors", function(response) {
-    	// antwort verarbeiten
-        for(item of response) {
+    	// API response: response is a array of author-objects
+        for(author of response) {
         	li = document.createElement("li");
-        	li.id = item.id;
-        	li.innerText = item.firstname + " " + item.lastname;
+        	// set list id-attribute with id of autor
+        	li.id = author.id;
+        	li.innerText = author.firstname + " " + author.lastname;
         	ul.append(li);
         }
 	    divAuthors.append(ul);
