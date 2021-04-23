@@ -26,7 +26,7 @@
     </div>
 </div>
 <script>
-    var apiURL = 'http://bta-movies.loc/api',
+    var apiURL = 'http://bta-movies-start.loc/api',
         btn = document.getElementById("btnLoadAuthors")
         ul = document.createElement("ul"),
         divList = document.querySelector(".liste"),
