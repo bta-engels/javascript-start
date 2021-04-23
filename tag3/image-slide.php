@@ -13,8 +13,7 @@
 	    if(counter === images.length) {
             return clearInterval(interval);
 	    }
-    	img.src = "../img/" + images[counter];
-    	counter++;
+    	img.src = "../img/" + images[counter++];
     }
 </script>
 <?php require '../inc/footer.html'; ?>

@@ -14,8 +14,7 @@
 	    if(counter === images.length) {
 		    counter = 0;
 	    }
-    	img.src = "../img/" + images[counter];
-    	counter++;
+    	img.src = "../img/" + images[counter++];
     }
 </script>
 <?php require '../inc/footer.html'; ?>
