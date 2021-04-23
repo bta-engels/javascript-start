@@ -1,50 +1,62 @@
-<?php require '../inc/header.html'; ?>
-
-<h1>Autoren API</h1>
-<div class="row min-vh-100">
+<?php require '../inc/header.html'; ?><h1>Autoren API</h1><div class="row min-vh-100">
     <div class="col min-vh-100 m-2 p-2"></div>
     <div class="col min-vh-100 m-2 p-2"></div>
 </div>
-
 <script>
-    var divAuthors = document.querySelector(".col:first-child"),
-	    divAuthor = document.querySelector(".col:last-child"),
-        ul = document.createElement("ul"),
-        li, author;
-    // ajax request per GET methode
-    const URL = "http://bta-movies-start.loc";
-    $.get(URL + "/api/authors", function(response) {
-    	// API response: response is a array of author-objects
-        for(author of response) {
-        	li = document.createElement("li");
-        	// set list id-attribute with id of autor
-        	li.id = author.id;
-        	li.innerText = author.firstname + " " + author.lastname;
-        	ul.append(li);
-        }
-	    divAuthors.append(ul);
-        // todo: click on author => get author data per ajax request (/api/author/ID)
-    });
+	var divAuthors = document.querySelector(".col:first-child"),
+		divAuthor = document.querySelector(".col:last-child"),
+		ul = document.createElement("ul"),
+		li, author;
+	// ajax request per GET methode
+	const URL = "http://bta-movies-start.loc";
+	var div1 = document.querySelector("div.col:first-child"),
+		div2 = document.querySelector("div.col:last-child");
+	$.get(URL + "/api/authors", function(response) {        var ul = document.createElement("ul"), li;
+		for (var item of response) {
+			let id = item.id;
+			li = document.createElement("li");
+			li.innerText = item.firstname + " " + item.lastname;
+			li.id = item.id;
+			ul.append(li);
+		}
+		div1.append(ul);
 
-    function getAuthor(id) {
-    }
+		ul.onclick = function(e) {
+			getAuthor(e.target.id);
+		}
+	});
 
-    // API liefert alle autoren per JSON, baue damit liste (li) zusammen
-    // loop über authors array
-    // li - elem bauen
-    // firstname, lastname vom autor darstellen
-    // li - elem dem ul - elem hinzufügen
+	function getAuthor(id) {
+		$.get(URL + "/api/author/" + id, function(response) {
+			var movieCount = document.createElement("h5");
+			divAuthor.innerHTML = "";
+			movieCount.innerText = "Anzahl Filme: " + response.movies.length;
+			divAuthor.append(movieCount);
+
+
+			ul = document.createElement("ul")
+			ul.className = "movies";
+			for(var item of response.movies) {
+				li = document.createElement("li");
+				li.innerText = item.title;
+				ul.append(li);
+			}
+			divAuthor.append(ul);
+		});
+	}
 </script>
 <style>
     .col {
         border: 1px solid #999;
     }
-	.movies {
-		padding-left: 1.0rem;
-	}
+    .movies {
+        padding-left: 1.0rem;
+    }
     .movies li {
         font-size: 0.6rem;
         margin-left: 0;
     }
 </style>
+
 <?php require '../inc/footer.html'; ?>
+
