@@ -37,15 +37,11 @@ var interval = setInterval(function() {
             counter = 0;
         } else {
             // stoppe interval wenn max anzahl erreicht
-            console.info("stop bei: " + counter);
-            clearInterval(interval);
-	        return;
+	        return clearInterval(interval);
         }
     }
-    img.src = imgPath + images[counter];
+    img.src = imgPath + images[counter++];
     img.animate(myFadeIn, 1000)
-    console.info(counter);
-    counter++;
 }, delay);
 </script>
 <style>
