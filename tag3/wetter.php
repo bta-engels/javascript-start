@@ -18,28 +18,19 @@
 	window.onkeypress = function (e) {
         if(e.key === "Enter") {
         	getWetterData();
-	        var cityName = city.value,
-		        APIURL = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&lang=de&units=metric&APPID=" + OW_API_KEY;
-
-	        $.get(APIURL, function (response) {
-		        var temperatur = response.main.temp,
-			        beschreibung = response.weather[0].description,
-                    iconUrl = "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
-
-		        h1.innerText = temperatur + " °C";
-		        h3.innerText = beschreibung;
-		        h3.style.backgroundImage = "url("+iconUrl+")";
-	        });
         }
     }
 
     button.onclick = function () {
 		getWetterData();
+	}
+
+	function getWetterData() {
 		var cityName = city.value,
 			APIURL = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&lang=de&units=metric&APPID=" + OW_API_KEY;
 
 		$.get(APIURL, function (response) {
-			var temperatur = response.main.temp,
+			var temperatur = Math.round(response.main.temp),
 				beschreibung = response.weather[0].description,
 				iconUrl = "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
 
@@ -47,10 +38,6 @@
 			h3.innerText = beschreibung;
 			h3.style.backgroundImage = "url("+iconUrl+")";
 		});
-	}
-
-	function getWetterData() {
-
     }
 </script>
 <style>
