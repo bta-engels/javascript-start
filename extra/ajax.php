@@ -43,7 +43,7 @@
             dataType: 'json',
             success: function(response) {
                 // alles ist gut gegangen
-                let autoren = response.data;
+                let autoren = response;
                 autoren.forEach(function(autor){
                     let li = document.createElement("li");
                     li.innerText = autor.firstname + " " + autor.lastname;
@@ -55,7 +55,7 @@
                         let url = apiURL + '/author/' + autor.id;
                         $.getJSON(url, function(resp){
                             console.info(resp);
-                            let myAutor = resp.data,
+                            let myAutor = resp,
                                 name = myAutor.firstname + " " + myAutor.lastname;
 
                             speakText(name, 'en_GB')

@@ -1,12 +1,16 @@
 <?php require '../inc/header.html'; ?>
 <script src="../js/config.js"></script>
 
-<h1 id="temperatur">Mein Wetter</h1>
-<h3 id="beschreibung"></h3>
+<div class="align-content-center">
+    <div class="col-12">
+        <h1 id="temperatur">Mein Wetter</h1>
+        <h3 id="beschreibung"></h3>
 
-<div class="form-group">
-    <input type="text" id="city" class="form-control" placeholder="Stadt wählen ...">
-    <input type="button" id="submit" value="suche" class="btn btn-primary">
+        <div class="form-group">
+            <input type="text" id="city" class="form-control d-inline w-50" placeholder="Stadt wählen ...">
+            <input type="button" id="submit" value="suche" class="btn btn-primary">
+        </div>
+    </div>
 </div>
 
 <script>
