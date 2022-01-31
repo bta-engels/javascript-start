@@ -55,33 +55,16 @@
         </div>
     </div>
     <script>
-    var firstRow = document.querySelector("body .container .row"),
-        col3 = firstRow.querySelector(".col:last-child"),
-        h5 = col3.querySelector("h5"),
-        rows = document.querySelectorAll(".row"),
-        p = rows[1].querySelector(".col:nth-child(2) p")
-    ;
-
-    h5.style.color = "red";
-    p.style.backgroundColor = "#009";
-    p.style.color = "#fff";
-    var h1 = document.querySelector("h1"),
-	    ul = document.querySelector("ul");
-
-    ul.onmouseover = function (e) {
-	    //console.info(e.target.innerText);
-	    h1.innerText = e.target.innerText;
-    }
-    ul.onmouseout = function (e) {
-	    //console.info(e.target.innerText);
-	    h1.innerText = "wech";
-    }
-    console.info(p)
+/*
+- 3. Spalte in 1.Reihe Font-Color in Rot
+- Hintergrund-Farbe in unterer Reihe 2.Spalte in Blau und FontColor in Weiß
+- Untere Reihe 3. Spalte: per mouseover die Namen in der Liste in der H1 Überschrift ausgeben
+*/
     </script>
     <style>
         ul li {
             cursor: pointer;
-            color: #a00;
+            color: #c00;
         }
     </style>
 <?php require '../inc/footer.html'; ?>

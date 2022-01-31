@@ -1,6 +1,6 @@
 <?php require '../inc/header.html'; ?>
 
-<h1>Bitte Zahlen eintragen</h1>
+<h1>Bitte Zahlen eintragen <!-- Rechner Ausgabe auch hier --></h1>
 
 <form class="mt-5">
     <div class="form-group">
@@ -26,18 +26,6 @@
     </div>
 </form>
 <script>
-    var a = document.getElementById('a'),
-        b = document.getElementById('b'),
-        button = document.getElementById('submit'),
-        operator = document.getElementById('operator'),
-        h1 = document.querySelector("h1");
-
-        button.onclick = function () {
-            var numA = parseInt(a.value),
-                numB = parseInt(b.value),
-                ergebnis = rechner(numA, numB, operator.value);
-            // ergebnis ausgabe
-	        h1.innerText = ergebnis;
-        }
+// Rechner Funktion per JS
 </script>
 <?php require '../inc/footer.html'; ?>

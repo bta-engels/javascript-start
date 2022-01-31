@@ -1,27 +1,9 @@
 <?php require '../inc/header.html'; ?>
 
 <h1>Test</h1>
-<div></div>
+<div><!-- html liste mit style klassen: "default", "darkPower", "redYellow", "blueRed"  --></div>
 
 <script>
-    var body = document.querySelector('body'),
-        div = document.querySelector('.container div'),
-        styles = ["default", "darkPower", "redYellow", "blueRed"],
-        ul = document.createElement("ul");
-    // hänge ul in div ein
-    div.append(ul);
-
-    for(item of styles) {
-	    // liste bauen via document.createElement und element.appendChild(...)
-        li = document.createElement("li");
-	    li.innerText = item;
-	    li.style.cursor = "pointer";
-	    // hänge li in ul ein
-	    ul.append(li);
-    }
-
-    ul.onclick = function (e) {
-    	body.className = e.target.innerText;
-    }
+// on list element click set style of body with jquery
 </script>
 <?php require '../inc/footer.html'; ?>

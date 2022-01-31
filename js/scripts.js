@@ -1,21 +1,5 @@
 
 function rechner(a, b, operator) {
-	// switch für berechnung
-	// gib ergebnis zurück (return)
-	switch(operator) {
-        case '-':
-            return a - b;
-            break;
-        case '*':
-            return a * b;
-            break;
-        case '/':
-            return a / b;
-            break;
-        default:    
-            return a + b;
-            break;
-	}		
 }
 
 function speakText(txt, locale = "de-DE") {

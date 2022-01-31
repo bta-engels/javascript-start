@@ -4,12 +4,8 @@
 <hr>
 <input type="text" id="inpText">
 <script>
-    var txt = document.getElementById('txt'),
-        inpText = document.getElementById('inpText');
-
-    inpText.onkeyup = function (e) {
-//    	console.info(e.target.value);
-    	txt.innerText = e.target.value;
-    }
+	/**
+     * aktualisiere den Text in div mit id "txt" je nach eingabe im text input feld
+ 	 */
 </script>
 <?php require '../inc/footer.html'; ?>
