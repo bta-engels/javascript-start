@@ -1,5 +1,16 @@
 
-function rechner(a, b, operator) {
+function rechner(a, b, operator = '+') {
+	switch(operator) {
+		case '*':
+			return a * b;
+		case '/':
+			return a / b;
+		case '-':
+			return a - b;
+		case '+':
+		default:
+			return a + b;
+	}
 }
 
 function speakText(txt, locale = "de-DE") {
