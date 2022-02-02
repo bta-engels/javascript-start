@@ -60,7 +60,6 @@
 - Hintergrund-Farbe in unterer Reihe 2.Spalte in Blau und FontColor in Weiß
 - Untere Reihe 3. Spalte: per mouseover die Namen in der Liste in der H1 Überschrift ausgeben
 */
-    var paragraph13 = document.querySelector('div.row .col:last-child p');
     </script>
     <style>
         ul li {
