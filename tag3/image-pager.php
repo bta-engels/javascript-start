@@ -26,22 +26,27 @@ const delay = 1000,
      btnNext.onclick = next;
      btnPrev.onclick = prev;
 
+window.onload = function() {
+	img.src = '../img/'+ imageList[counter]
+}
 
 function prev() {
-    if (counter < 0) {
-        counter = imageList.length - 1
+    if (counter <= 0) {
+        counter = imageList.length - 1;
+    } else {
+	    counter--;
     }
-    counter--;
-    img.src ='../img/'+ imageList[counter]
-}
-function next() {
-    if (counter > imageList.length - 1 ) {
-        counter = 0
-    }
-    counter++;
-    img.src ='../img/'+ imageList[counter]
+    img.src ='../img/'+ imageList[counter];
 }
 
+function next() {
+    if (counter >= imageList.length - 1) {
+        counter = 0;
+    } else {
+	    counter++;
+    }
+    img.src ='../img/' + imageList[counter];
+}
 </script>
 <?php require '../inc/footer.html'; ?>
 
