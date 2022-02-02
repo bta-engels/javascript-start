@@ -5,5 +5,7 @@
 
 <script>
 // on list element click set style of body with jquery
+var styles = ["default", "darkPower", "redYellow", "blueRed"];
+
 </script>
 <?php require '../inc/footer.html'; ?>

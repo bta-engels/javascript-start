@@ -4,6 +4,8 @@
 <div><!-- html liste mit style klassen: "default", "darkPower", "redYellow", "blueRed"  --></div>
 
 <script>
-// on list element click set style of body with jquery
+// on list element click set style of body
+var styles = ["default", "darkPower", "redYellow", "blueRed"];
+
 </script>
 <?php require '../inc/footer.html'; ?>
