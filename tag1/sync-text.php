@@ -1,6 +1,6 @@
 <?php require '../inc/header.html'; ?>
 
-<h1>Bitte Name eingeben<!-- hier Name ausgeben per Tasteneingabe --></h1>
+<h1>Bitte Name eingeben<!-- hier Name ausgeben per Tasteneingabe im Input Feld --></h1>
 
 <form class="mt-5">
     <div class="form-group">
