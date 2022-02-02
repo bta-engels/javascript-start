@@ -17,9 +17,17 @@
 const apiURL = 'http://laravel-shop.loc/api';
 var $divTodos = $('.row .col:first-child'),
 	$divTodo = $('.row .col:last-child');
+    $ul = $(document.createElement('ul'));
+    $li = $(document.createElement('li'));
+    $divTodos.append($ul);
 
 $.get(apiURL + "/todos", function (data) {
-	console.info(data);
+	$.each(data, function(index, todo){
+		var li = $li.clone();
+		li.text(todo.text)
+        $ul.append(li);
+
+    });
 });
 </script>
 <style>
