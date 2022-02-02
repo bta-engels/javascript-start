@@ -17,6 +17,7 @@ const delay = 3000,
     'venus.jpg',
     'femö1.jpg'
 ];
+var img = document.getElementById('image');
 
 </script>
 <?php require '../inc/footer.html'; ?>
