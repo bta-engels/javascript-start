@@ -21,13 +21,13 @@ var $divTodos = $('.row .col:first-child'),
     $li = $(document.createElement('li'));
     $divTodos.append($ul);
 
-
 $.get(apiURL + "/todos", function (data) {
-    $.each(data,function (todo)){
-        var li = $li.clone();
-        li.text(todo.text);
+	$.each(data, function(index, todo){
+		var li = $li.clone();
+		li.text(todo.text)
         $ul.append(li);
-    }
+
+    });
 });
 </script>
 <style>
