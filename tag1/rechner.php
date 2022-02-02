@@ -26,6 +26,7 @@
     </div>
 </form>
 <script>
+
 var submitButton = document.getElementById('submit'),
     h1 = document.querySelector('h1');
 
