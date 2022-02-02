@@ -12,6 +12,15 @@
 /*
 * Hole Todos per ajax-request von Todo-API
 */
+//var divTodos = document.querySelector('.row .col:last-child')
+// das selbe per jquery
+const apiURL = 'http://laravel-shop.loc/api';
+var $divTodos = $('.row .col:first-child'),
+	$divTodo = $('.row .col:last-child');
+
+$.get(apiURL + "/todos", function (data) {
+	console.info(data);
+});
 </script>
 <style>
     .col {

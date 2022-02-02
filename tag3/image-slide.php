@@ -22,15 +22,14 @@ const delay = 1000,
 
  //img.src = "../img/"+imageList[1];
 setInterval(slide,delay);
-function slide() {
 
+function slide() {
     if (counter >= imageList.length) {
         counter = 0;
     }
     img.src = "../img/"+imageList[counter]
     console.info(counter);
     counter++;
-
 }
 </script>
 <?php require '../inc/footer.html'; ?>
