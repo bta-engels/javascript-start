@@ -4,11 +4,11 @@
 
 <form class="mt-5">
     <div class="form-group">
-        <label for="a">Zahl A</label>
+        <label for="firstname">Vorname</label>
         <input type="text" id="firstname" class="form-control">
     </div>
     <div class="form-group">
-        <label for="b">Zahl B</label>
+        <label for="lastname">Nachname</label>
         <input type="text" id="lastname" class="form-control">
     </div>
     <div class="form-group">
@@ -16,6 +16,14 @@
     </div>
 </form>
 <script>
+var submitButton = document.getElementById('submit'),
+    h1 = document.querySelector('h1');
 
+submitButton.onclick = () => {
+	let firstname = document.getElementById('firstname').value,
+        lastname = document.getElementById('lastname').value;
+
+	h1.innerText = "Hallo " + firstname + " " + lastname;
+}
 </script>
 <?php require '../inc/footer.html'; ?>
