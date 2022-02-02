@@ -5,7 +5,7 @@
 <form class="mt-5">
     <div class="form-group">
         <label for="a">Zahl A</label>
-        <input type="text" id="a" class="form-control">
+        <input type="number" id="a" class="form-control">
     </div>
     <div class="form-group">
         <label for="operator">Operator</label>
@@ -19,13 +19,23 @@
     </div>
     <div class="form-group">
         <label for="b">Zahl B</label>
-        <input type="text" id="b" class="form-control">
+        <input type="number" id="b" class="form-control">
     </div>
     <div class="form-group">
         <input type="button" id="submit" value="rechne" class="btn btn-primary">
     </div>
 </form>
 <script>
-// Rechner Funktion per JS
+var submitButton = document.getElementById('submit'),
+    h1 = document.querySelector('h1');
+
+submitButton.onclick = function () {
+	var a = parseInt(document.getElementById('a').value),
+		b = parseInt(document.getElementById('b').value),
+		operator = document.getElementById('operator').value,
+        result = rechner(a, b, operator);
+
+	h1.innerText = "Ergebnis ist " + result;
+}
 </script>
 <?php require '../inc/footer.html'; ?>
