@@ -5,7 +5,7 @@
 <form class="mt-5">
     <div class="form-group">
         <label for="firstname">Vorname</label>
-        <input type="text" id="firstname" class="form-control">
+        <input type="text" id="firstname" class="form-control" value="Name">
     </div>
     <div class="form-group">
         <label for="lastname">Nachname</label>
