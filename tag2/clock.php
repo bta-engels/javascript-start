@@ -1,8 +1,13 @@
 <?php require '../inc/header.html'; ?>
 
-<h1><span><!-- datum --></span> <span><!-- uhrzeit --></span></h1>
+<h1 id="clock"></h1>
 
 <script>
-// get time per setInterval
+    setInterval(myTimer, 1000);
+
+    function myTimer() {
+        const d = new Date();
+        document.getElementById("clock").innerHTML = d.toLocaleTimeString();
+    }
 </script>
 <?php require '../inc/footer.html'; ?>
