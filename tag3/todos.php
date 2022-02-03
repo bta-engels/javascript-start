@@ -16,16 +16,20 @@
 // das selbe per jquery
 const apiURL = 'http://laravel-shop.loc/api';
 var $divTodos = $('.row .col:first-child'),
-	$divTodo = $('.row .col:last-child');
+	$divTodo = $('.row .col:last-child'),
+    counter = 0;
     $ul = $(document.createElement('ul'));
     $li = $(document.createElement('li'));
     $divTodos.append($ul);
 
+
+
 $.get(apiURL + "/todos", function (data) {
 	$.each(data, function(index, todo){
 		var li = $li.clone();
-		li.text(todo.text)
-        $ul.append(li);
+		li.text(todo.text);
+        $ul.append(li)
+        counter++;
 
     });
 });

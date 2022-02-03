@@ -73,9 +73,9 @@
     h3 = document.querySelectorAll('h3')[1];
     ul = document.querySelector('ul');
     ul.onmouseover = (e) => {
-        //console.info(e.target)
-        h3.innerText = e.target.innerText;
-    }
+    //console.info(e.target)
+    h3.innerText = e.target.innerText;
+}
 
     </script>
     <style>
