@@ -5,7 +5,7 @@
 </div>
 
 <script>
-const delay = 1000,
+const delay = 3000,
     imageList = [
     'cowboy.jpg',
     'ziel.jpg',
