@@ -27,8 +27,18 @@ var $divTodos = $('.row .col:first-child'),
 $.get(apiURL + "/todos", function (data) {
 	$.each(data, function(index, todo){
 		var li = $li.clone();
-		li.text(todo.text);
-        $ul.append(li)
+		li.text(todo.text).attr({'rel':todo.id});
+
+        $ul.append(li);
+        li.click(function (e){
+            var id = $(e.target).attr('rel');
+            //console.info(id);
+            $.get(apiURL + "/todos/" + id, function (todo) {
+                console.info(todo);
+
+            })
+
+        })
         counter++;
 
     });
