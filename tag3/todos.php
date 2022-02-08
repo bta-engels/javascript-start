@@ -22,8 +22,6 @@ var $divTodos = $('.row .col:first-child'),
     $li = $(document.createElement('li'));
     $divTodos.append($ul);
 
-
-
 $.get(apiURL + "/todos", function (data) {
 	$.each(data, function(index, todo){
 		var li = $li.clone();
@@ -35,12 +33,9 @@ $.get(apiURL + "/todos", function (data) {
             //console.info(id);
             $.get(apiURL + "/todos/" + id, function (todo) {
                 console.info(todo);
-
             })
-
         })
         counter++;
-
     });
 });
 </script>
