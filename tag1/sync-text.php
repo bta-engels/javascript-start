@@ -8,6 +8,8 @@
         <input type="text" id="name" class="form-control" />
     </div>
 </form>
+
 <script>
 </script>
+
 <?php require '../inc/footer.html'; ?>
