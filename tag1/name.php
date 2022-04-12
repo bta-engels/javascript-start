@@ -15,15 +15,17 @@
         <input type="button" id="button" value="senden" class="btn btn-primary">
     </div>
 </form>
-
 <script>
-let button = document.getElementById('button');
+    let button = document.getElementById('button');
 
-button.onclick = function () {
 
-	let firstname = document.getElementById('firstname');
-
-	console.info(firstname + " " )
-}
+    button.onclick = function () {
+        let firstname = document.getElementById('firstname').value;
+        let lastname = document.getElementById('lastname').value;
+        let h1 = document.querySelector('h1');
+        h1.innerText = firstname + " " + lastname;
+        h1.style.color = 'orange';
+        console.info(h1);
+    }
 </script>
 <?php require '../inc/footer.html'; ?>

@@ -1,7 +1,7 @@
 <script>
     // einfache variable (string, int, float)
     let name = "Bernd Engels",
-        zahl = 4.3,
+        zahl = 200,
         year = 2021;
 
 //        document.writeln(name);
@@ -10,7 +10,6 @@
     // array variable numerisch
     let arr = [10, 'Hans', 'Lisa'],
         anzahl = arr.length;
-//    console.info(arr);
 
 //    console.info(anzahl);
 	// assoziatives array
@@ -22,10 +21,10 @@
     // objekte
     let person = {
         "firstname": "Bernd",
-        "lastname": "Engels",
+        "lastname": "Engels"
     };
 //    console.info(person['lastname']);
-//    console.info(person.lastname);
+    console.info(person.lastname);
     // klassische for-schleife
     for(let i = 0; i < 10; i++) {
 //        console.info(i);
@@ -44,7 +43,6 @@
     function hallo(msg) {
         return "Hallo " + msg;
     }
-
-    let test = hallo('Bernd Engels');
+    var test = hallo('Bernd');
     console.info(test);
 </script>
