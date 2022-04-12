@@ -14,30 +14,6 @@
 */
 //var divTodos = document.querySelector('.row .col:last-child')
 // das selbe per jquery
-const apiURL = 'http://laravel-shop.loc/api';
-var $divTodos = $('.row .col:first-child'),
-	$divTodo = $('.row .col:last-child'),
-    counter = 0;
-    $ul = $(document.createElement('ul'));
-    $li = $(document.createElement('li'));
-    $divTodos.append($ul);
-
-$.get(apiURL + "/todos", function (data) {
-	$.each(data, function(index, todo){
-		var li = $li.clone();
-		li.text(todo.text).attr({'rel':todo.id});
-
-        $ul.append(li);
-        li.click(function (e){
-            var id = $(e.target).attr('rel');
-            //console.info(id);
-            $.get(apiURL + "/todos/" + id, function (todo) {
-                console.info(todo);
-            })
-        })
-        counter++;
-    });
-});
 </script>
 <style>
     .col {

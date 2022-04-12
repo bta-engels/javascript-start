@@ -9,11 +9,5 @@
     </div>
 </form>
 <script>
-var h1 = document.querySelector('h1'),
-    inpName = document.getElementById('name');
-
-inpName.onkeyup = (e) => {
-	h1.innerText = e.target.value;
-}
 </script>
 <?php require '../inc/footer.html'; ?>

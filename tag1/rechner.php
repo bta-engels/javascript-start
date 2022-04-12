@@ -26,17 +26,5 @@
     </div>
 </form>
 <script>
-
-var submitButton = document.getElementById('submit'),
-    h1 = document.querySelector('h1');
-
-submitButton.onclick = function () {
-	var a = parseInt(document.getElementById('a').value),
-		b = parseInt(document.getElementById('b').value),
-		operator = document.getElementById('operator').value,
-        result = rechner(a, b, operator);
-
-	h1.innerText = "Ergebnis ist " + result;
-}
 </script>
 <?php require '../inc/footer.html'; ?>

@@ -19,34 +19,6 @@ const delay = 1000,
     'venus.jpg',
     'femö1.jpg'
 ];
- var img = document.getElementById('image'),
-     btnPrev = document.getElementById('prev'),
-     btnNext = document.getElementById('next'),
-     counter = 0;
-     btnNext.onclick = next;
-     btnPrev.onclick = prev;
-
-window.onload = function() {
-	img.src = '../img/'+ imageList[counter]
-}
-
-function prev() {
-    if (counter <= 0) {
-        counter = imageList.length - 1;
-    } else {
-	    counter--;
-    }
-    img.src ='../img/'+ imageList[counter];
-}
-
-function next() {
-    if (counter >= imageList.length - 1) {
-        counter = 0;
-    } else {
-	    counter++;
-    }
-    img.src ='../img/' + imageList[counter];
-}
 </script>
 <?php require '../inc/footer.html'; ?>
 

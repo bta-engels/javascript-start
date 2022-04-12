@@ -16,15 +16,5 @@
     </div>
 </form>
 <script>
-var submitButton = document.getElementById('submit'),
-    h1 = document.querySelector('h1');
-
-// ES6 syntax (arrow functions), seit 2015
-submitButton.onclick = () => {
-	let firstname = document.getElementById('firstname').value,
-        lastname = document.getElementById('lastname').value;
-
-	h1.innerText = "Hallo " + firstname + " " + lastname;
-}
 </script>
 <?php require '../inc/footer.html'; ?>

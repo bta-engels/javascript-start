@@ -17,20 +17,6 @@ const delay = 3000,
     'venus.jpg',
     'femö1.jpg'
 ];
- var img = document.getElementById('image'),
-     counter = 0;
-
- //img.src = "../img/"+imageList[1];
-setInterval(slide,delay);
-
-function slide() {
-    if (counter >= imageList.length) {
-        counter = 0;
-    }
-    img.src = "../img/"+imageList[counter]
-    console.info(counter);
-    counter++;
-}
 </script>
 <?php require '../inc/footer.html'; ?>
 
