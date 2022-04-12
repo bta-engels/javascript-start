@@ -5,7 +5,7 @@
 <form class="mt-5">
     <div class="form-group">
         <label for="firstname">Vorname</label>
-        <input type="text" id="firstname" class="form-control" value="Name">
+        <input type="text" id="firstname" class="form-control" value="">
     </div>
     <div class="form-group">
         <label for="lastname">Nachname</label>
@@ -15,6 +15,13 @@
         <input type="button" id="button" value="senden" class="btn btn-primary">
     </div>
 </form>
+
 <script>
+let button = document.getElementById('button');
+
+button.onclick = function () {
+	let firstname = document.getElementById('firstname');
+	console.info(firstname)
+}
 </script>
 <?php require '../inc/footer.html'; ?>

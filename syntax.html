@@ -1,6 +1,6 @@
 <script>
     // einfache variable (string, int, float)
-    var name = "Bernd Engels",
+    let name = "Bernd Engels",
         zahl = 200,
         year = 2021;
 
@@ -8,25 +8,25 @@
 //        console.info(name);
 
     // array variable numerisch
-    var arr = [10, 'Hans', 'Lisa'],
+    let arr = [10, 'Hans', 'Lisa'],
         anzahl = arr.length;
 
 //    console.info(anzahl);
 	// assoziatives array
-    var author = [];
+    let author = [];
     author["firstname"] = "Bernd";
     author["lastname"] = "Engels";
 //    console.info(author);
 
     // objekte
-    var person = {
+    let person = {
         "firstname": "Bernd",
         "lastname": "Engels"
     };
 //    console.info(person['lastname']);
     console.info(person.lastname);
     // klassische for-schleife
-    for(var i = 0; i < 10; i++) {
+    for(let i = 0; i < 10; i++) {
 //        console.info(i);
     }
     // kurschreibweise mit 'of'
@@ -43,6 +43,6 @@
     function hallo(msg) {
         return "Hallo " + msg;
     }
-    var test = hallo('Bernd');
+    let test = hallo('Bernd');
     console.info(test);
 </script>

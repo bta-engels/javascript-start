@@ -1,4 +1,6 @@
 
+
+
 function speakText(txt, locale = "de-DE") {
 	var utterance = new SpeechSynthesisUtterance(),
 		voices = speechSynthesis.getVoices();
