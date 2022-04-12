@@ -20,8 +20,10 @@
 let button = document.getElementById('button');
 
 button.onclick = function () {
+
 	let firstname = document.getElementById('firstname');
-	console.info(firstname)
+
+	console.info(firstname + " " )
 }
 </script>
 <?php require '../inc/footer.html'; ?>
