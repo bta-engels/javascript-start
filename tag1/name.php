@@ -12,7 +12,7 @@
         <input type="text" id="lastname" class="form-control">
     </div>
     <div class="form-group">
-        <input type="button" id="submit" value="senden" class="btn btn-primary">
+        <input type="button" id="button" value="senden" class="btn btn-primary">
     </div>
 </form>
 <script>
