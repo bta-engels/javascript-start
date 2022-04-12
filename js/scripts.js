@@ -20,3 +20,26 @@ function speakText(txt, locale = "de-DE") {
 
     return speechSynthesis;
 }
+
+function calculator (a, b, operator) {
+	a=parseFloat(a);
+	b=parseFloat(b);
+	switch (operator) {
+		case '+':
+			return a + b;
+			break;
+
+		case '-':
+			return a - b;
+			break;
+
+		case '*':
+			return a * b;
+			break;
+
+		case '/':
+			return a / b;
+			break;
+	}
+	return;
+}

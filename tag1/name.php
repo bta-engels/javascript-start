@@ -5,7 +5,7 @@
 <form class="mt-5">
     <div class="form-group">
         <label for="firstname">Vorname</label>
-        <input type="text" id="firstname" class="form-control" value="Name">
+        <input type="text" id="firstname" class="form-control" value="">
     </div>
     <div class="form-group">
         <label for="lastname">Nachname</label>
@@ -16,5 +16,20 @@
     </div>
 </form>
 <script>
+    //let firstnameObject = document.getElementById('firstname');
+    //console.info(firstnameObject.value);
+    //let firstname = firstnameObject.value;
+
+    let button = document.getElementById('button');
+
+    button.onclick = function(){
+        let firstname = document.getElementById('firstname'). value;
+        let lastname = document.getElementById('lastname'). value;
+        let h1= document.querySelector('h1');
+        h1.innerText = firstname + " " + lastname;
+        h1.style.color = '#ff0000';
+        console.info(firstname + " " + lastname);
+        console.info(h1);
+    }
 </script>
 <?php require '../inc/footer.html'; ?>
