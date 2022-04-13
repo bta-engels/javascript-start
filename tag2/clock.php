@@ -17,7 +17,6 @@
 	    h1.innerText = date.toLocaleTimeString();
     }, 1000);
     */
-     */
     /* mit eigener funktions deklaration
         setInterval(myTimer, 1000);
         function myTimer() {
