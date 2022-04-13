@@ -28,10 +28,10 @@
 <script>
     let button = document.getElementById('button');
     button.onclick = function () {
-        let a = document.getElementById('a').value;
-        let b = document.getElementById('b').value;
-        let operator = document.getElementById('operator').value;
-        let h1 = document.querySelector('h1');
+        let a = document.getElementById('a').value,
+            b = document.getElementById('b').value,
+            operator = document.getElementById('operator').value,
+            h1 = document.querySelector('h1');
         h1.innerText = calculate(a, b, operator);
 
     }

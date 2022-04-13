@@ -55,11 +55,32 @@
         </div>
     </div>
     <script>
-/*
-- 3. Spalte in 1.Reihe Font-Color in Rot
+        /*
+- 3. Spalte in 1.Reihe Font-Color in Rot +
 - Hintergrund-Farbe in unterer Reihe 2.Spalte in Blau und FontColor in Weiß
-- Untere Reihe 3. Spalte: per mouseover die Namen in der Liste in der H1 Überschrift ausgeben
+- Untere Reihe 3. Spalte: per onmouseover die Namen in der Liste in der H1 Überschrift ausgeben
 */
+        let col3 = document.querySelector('div.row div:last-child p')
+        col3.style.color = '#0000ff';
+
+        let rows = document.querySelectorAll('div.row')
+            row2 = rows[1].querySelector('div:nth-child(2) p');
+        row2.style.backgroundColor = '#0000ff'
+        row2.style.color = 'white';
+
+        let ul = document.querySelector('div.row:nth-of-type(2) div:last-child ul')
+            h1 = document.querySelector('h1')
+            h1text = h1.innerText;
+        ul.onmouseover = function (event) {
+            h1.innerText = event.target.innerText
+            //console.info(event.target.innerText)
+        }
+
+        ul.onmouseout = function () {
+            h1.innerText = h1text
+            //console.info(event.target.innerText)
+        }
+
     </script>
     <style>
 
