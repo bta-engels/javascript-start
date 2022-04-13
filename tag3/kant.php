@@ -5,6 +5,24 @@
 <div id="txt" class="m-3">Bitte warten</div>
 
 <script>
+    const btnLoad = document.getElementById('load')
+        btnRead = document.getElementById('read')
+        txt = document.getElementById('txt')
+
+    btnLoad.onclick = function () {
+		fetch("../data/kant_kurz.txt")
+            .then(function (r) {
+	            return r.text();
+            })
+            .then(function(text){
+				txt.innerText = text
+	            btnRead.onclick = function () {
+		            speakText(text)
+                }
+            });
+    }
+
+
     // lies text-datei per ajax request (GET methode)
 </script>
 <?php require '../inc/footer.html'; ?>
