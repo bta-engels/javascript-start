@@ -30,5 +30,6 @@
 
     load();
 </script>
+
 <?php require '../inc/footer.html'; ?>
 
