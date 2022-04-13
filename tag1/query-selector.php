@@ -60,6 +60,21 @@
 - Hintergrund-Farbe in unterer Reihe 2.Spalte in Blau und FontColor in Weiß
 - Untere Reihe 3. Spalte: per mouseover die Namen in der Liste in der H1 Überschrift ausgeben
 */
+        let col3 = document.querySelector('div.row:first-of-type div.col:nth-of-type(3)');
+        col3.style.color = 'red';
+
+        let col2 = document.querySelector('div.row:nth-of-type(2) div.col:nth-of-type(2)');
+        col2.style.backgroundColor = 'blue';
+        col2.style.color = 'white';
+
+        let row2 = document.querySelector('div.row:nth-of-type(2) div.col:nth-of-type(3)'),
+            names = row2.querySelector('div.col:nth-of-type(3) ul'),
+            h1 = document.querySelector('h1');
+            
+        names.onmouseover = (event) => {
+            let inner = event.target.innerText;
+            h1.innerText = inner;
+        }
     </script>
     <style>
 
