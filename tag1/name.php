@@ -18,7 +18,6 @@
 <script>
     let button = document.getElementById('button');
 
-
     button.onclick = function () {
         let firstname = document.getElementById('firstname').value;
         let lastname = document.getElementById('lastname').value;
