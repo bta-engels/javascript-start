@@ -23,9 +23,10 @@
     let button = document.getElementById('button');
 
     button.onclick = function(){
-        let firstname = document.getElementById('firstname'). value;
-        let lastname = document.getElementById('lastname'). value;
-        let h1= document.querySelector('h1');
+        let  firstname = document.getElementById('firstname'). value,
+             lastname = document.getElementById('lastname'). value,
+             h1= document.querySelector('h1');
+
         h1.innerText = firstname + " " + lastname;
         h1.style.color = '#ff0000';
         console.info(firstname + " " + lastname);

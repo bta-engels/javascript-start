@@ -4,7 +4,7 @@
 
 <form class="mt-5">
     <div class="form-group">
-        <label for="a">Zahl A</label>
+        <  for="a">Zahl A</ >
         <input type="number" step="0.1" id="a" class="form-control">
     </div>
     <div class="form-group">
