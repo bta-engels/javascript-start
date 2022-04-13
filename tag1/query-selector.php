@@ -67,12 +67,16 @@
             row2col2 = rows[1].querySelector('div:nth-child(2) p')
             ul = document.querySelector(".row:nth-of-type(2) div:last-child ul")
             h1 = document.querySelector('h1')
+            h1Text = h1.innerText
+
+        //alert(h1Text);
 
         ul.onmouseover = function (event) {
 	        h1.innerText = event.target.innerText
         }
 
         ul.onmouseout = function () {
+	        h1.innerText = h1Text
         }
 
 		col3.style.color = "blue"
