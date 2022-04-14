@@ -15,6 +15,11 @@
 
 <script>
 // wetter-daten von openweathermao ausgeben
+let temp,
+    description,
+    text,
+    btn;
+
 </script>
 <style>
     #beschreibung {
