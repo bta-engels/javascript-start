@@ -28,8 +28,9 @@ btn.onclick = function (){
 		.then(function (r) {
 			return r.json();
 		})
-		.then(function(json){
-			console.info(json)
+		.then(function(response){
+			console.info(response)
+            let temp = response.main.temp
 		});
 
 }
