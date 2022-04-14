@@ -22,8 +22,20 @@ let temp = document.getElementById('temperatur'),
 
 btn.onclick = function (){
     console.info(city.value)
-}
+    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city.value},de&units=metric&lang=de&APPID=${OW_API_KEY}`
 
+    fetch(url)
+        .then(function (r) {
+            return r.json();
+        })
+        .then(function(response){
+            console.info(response)
+            let temperatur = response.main.temp
+                description = response.weather[0].description
+            temp.innerText = `${temperatur} °C`
+            descr.innerText = description
+        });
+}
 
 
 </script>
