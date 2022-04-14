@@ -30,13 +30,12 @@ btn.onclick = function (){
         })
         .then(function(response){
             console.info(response)
-            let temperatur = response.main.temp
+            let temperatur = Math.round(response.main.temp)
                 description = response.weather[0].description
             temp.innerText = `${temperatur} °C`
             descr.innerText = description
         });
 }
-
 
 </script>
 <style>
