@@ -7,20 +7,22 @@
 <script>
     const btnLoad = document.getElementById('load')
         btnRead = document.getElementById('read')
-
-    txt = document.getElementById('txt')
+        txt = document.getElementById('txt')
 
     btnLoad.onclick = function () {
-        fetch("../data/kant_kurz.txt")
-        .then(function(r){
-            //console.info(r);
-            return r.text()
-        })
-        .then(function(t){
-            txt.innerText = t
-            btnRead.onclick = speakText (t)
-        })
+		fetch("../data/kant_kurz.txt")
+            .then(function (r) {
+	            return r.text();
+            })
+            .then(function(text){
+				txt.innerText = text
+	            btnRead.onclick = function () {
+		            speakText(text)
+                }
+            });
     }
+
+
     // lies text-datei per ajax request (GET methode)
 </script>
 <?php require '../inc/footer.html'; ?>

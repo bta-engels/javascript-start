@@ -19,7 +19,6 @@
         ];
         image = document.querySelector('img');
 
-
     const timer = ms => new Promise(res => setTimeout(res, ms));
 
     async function load () {
@@ -27,7 +26,7 @@
             image.src = `../img/${item}`;
             await timer(delay);
         }
-        load();
+		load();
     }
 
     load();
