@@ -24,7 +24,6 @@ const delay = 3000,
 
 let counter = 0
 let interval = setInterval(function() {
-    console.info(counter)
     img.src = '../img/' + imageList[counter];
     counter++
     if (counter >= countImages){
@@ -36,12 +35,6 @@ let interval = setInterval(function() {
         }
     }
 }, delay)
-
-//stop interval
-//clearInterval(interval)
-
-//img.src = '../img/' + imageList[8];
-
 </script>
 <?php require '../inc/footer.html'; ?>
 
