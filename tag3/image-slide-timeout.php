@@ -5,7 +5,7 @@
 </div>
 
 <script>
-    const delay = 3000,
+    const delay = 1000,
         imageList = [
         'cowboy.jpg',
         'ziel.jpg',
@@ -19,6 +19,7 @@
         ];
         image = document.querySelector('img');
 
+
     const timer = ms => new Promise(res => setTimeout(res, ms));
 
     async function load () {
@@ -26,6 +27,7 @@
             image.src = `../img/${item}`;
             await timer(delay);
         }
+        load();
     }
 
     load();
