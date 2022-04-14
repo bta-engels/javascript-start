@@ -70,11 +70,16 @@
         let row2 = document.querySelector('div.row:nth-of-type(2) div.col:nth-of-type(3)'),
             names = row2.querySelector('div.col:nth-of-type(3) ul'),
             h1 = document.querySelector('h1');
-            
-        names.onmouseover = (event) => {
-            let inner = event.target.innerText;
-            h1.innerText = inner;
+            h1Value = h1.innerText;
+
+        names.onmouseover = (event) => { 
+            h1.innerText = event.target.innerText;;
         }
+
+        names.onmouseout = (event) => {
+            h1.innerText = h1Value;
+        }
+
     </script>
     <style>
 
