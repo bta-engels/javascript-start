@@ -21,7 +21,6 @@ let temp = document.getElementById('temperatur'),
     btn = document.getElementById('submit')
 
 btn.onclick = function (){
-    console.info(city.value)
     let url = `http://api.openweathermap.org/data/2.5/weather?q=${city.value},de&units=metric&lang=de&APPID=${OW_API_KEY}`
 
     fetch(url)
@@ -29,7 +28,6 @@ btn.onclick = function (){
             return r.json();
         })
         .then(function(response){
-            console.info(response)
             let temperatur = Math.round(response.main.temp)
                 description = response.weather[0].description
 
@@ -37,7 +35,6 @@ btn.onclick = function (){
             descr.innerText = description
         });
 }
-
 
 </script>
 <style>
