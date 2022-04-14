@@ -14,7 +14,18 @@
 </div>
 
 <script>
-// wetter-daten von openweathermao ausgeben
+// wetter-daten von openweathermap ausgeben
+let temp = document.getElementById('temperatur'),
+    descr = document.getElementById('beschreibung'),
+    city = document.getElementById('city'),
+    btn = document.getElementById('submit')
+
+btn.onclick = function (){
+    console.info(city.value)
+}
+
+
+
 </script>
 <style>
     #beschreibung {
