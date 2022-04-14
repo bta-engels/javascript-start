@@ -1,7 +1,7 @@
 <?php require '../inc/header.html'; ?>
 
 <div class="w-100 row bg-dark">
-    <img id="image" src="../img/fahrrad.jpg" class="align-self-center m-auto" height="400" alt="Slider" title="Slider">
+    <img id="image" src="" class="align-self-center m-auto" height="400" alt="Slider" title="Slider">
 </div>
 
 <script>

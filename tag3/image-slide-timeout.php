@@ -5,7 +5,7 @@
 </div>
 
 <script>
-    const delay = 3000,
+    const delay = 1000,
         imageList = [
         'cowboy.jpg',
         'ziel.jpg',
@@ -26,9 +26,11 @@
             image.src = `../img/${item}`;
             await timer(delay);
         }
+		load();
     }
 
     load();
 </script>
+
 <?php require '../inc/footer.html'; ?>
 

@@ -1,24 +1,28 @@
 <?php require '../inc/header.html'; ?>
 
-<div id="txt">Bitte warten</div>
-<button id="load">Laden</button>
-<button id="read">Lesen</button>
+<button id="load" class="btn btn-primary">Lade Text</button>
+<button id="read" class="btn btn-primary ml-5">Lese Text</button>
+<div id="txt" class="m-3">Bitte warten</div>
 
 <script>
-    const btnLoad = document.getElementById('load'),
-        btnRead = document.getElementById('read');
-        txt = document.getElementById('txt');
+    const btnLoad = document.getElementById('load')
+        btnRead = document.getElementById('read')
+        txt = document.getElementById('txt')
 
-    btnLoad.onclick = () => {
-        fetch("../data/kant_kurz.txt")
-            .then(res => {
-                console.log(res);
-                return res.text();
+    btnLoad.onclick = function () {
+		fetch("../data/kant_kurz.txt")
+            .then(function (r) {
+	            return r.text();
             })
-            .then(file => {
-                txt.innerText = file;
-                btnRead.onclick = speakText(file);
-            })
+            .then(function(text){
+				txt.innerText = text
+	            btnRead.onclick = function () {
+		            speakText(text)
+                }
+            });
     }
+
+
+    // lies text-datei per ajax request (GET methode)
 </script>
 <?php require '../inc/footer.html'; ?>
