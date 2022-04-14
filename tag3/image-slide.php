@@ -6,6 +6,7 @@
 
 <script>
 const delay = 3000,
+    loop = true,
     imageList = [
         'cowboy.jpg',
         'ziel.jpg',
